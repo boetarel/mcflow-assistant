@@ -1,40 +1,101 @@
-# McFlow AI Workspace
+# McFlow Assistant 🌊
+### *Work smart, stay chilled.*
 
-Build a modern, responsive SaaS web app called "MacFlow" (tagline: "Work smart, stay chilled.") for professionals. Keep the code compact. No login, no registration, no database; nothing is saved beyond the browser tab.
+**McFlow Assistant** is an AI-powered workplace productivity assistant that automates repetitive admin tasks (writing emails, researching topics and summarising meetings) in one clean dashboard.
 
-Layout: dashboard with collapsible sidebar (Email, Research, Meetings), input and output sections on each page, theme toggle, bottom tab bar on mobile.
+🔗 **Live app:** [https://mcflow-assistant.lovable.app](https://mcflow-assistant.lovable.app)
+📦 **Repository:** [https://github.com/boetarel/mcflow-assistant](https://github.com/boetarel/mcflow-assistant)
 
-All outputs must be real AI-generated responses using Lovable AI, based on the user's actual input. No canned or generic text. Show loading, error and empty states.
+---
 
-1. Smart Email Generator: inputs for recipient, audience (client / manager / team), key points, length (Short / Medium); tone selector (Formal / Friendly / Persuasive). Output subject and body, editable, with Copy, Regenerate and tone switch.
+## 📌 Project Overview
 
-2. AI Research Assistant: input a topic, pasted article or URL. Output Summary, Key Insights, Recommendations, editable, with "Copy as notes". If a URL can't be read, say so and ask the user to paste the text; never invent page contents.
+Professionals spend a lot of time drafting emails, researching topics and writing up meeting notes. McFlow Assistant brings these tasks together in a single, responsive web application. Users enter their own input and receive AI-generated, editable output. There is no login, no registration and no database, so anyone can open the app and use it straight away.
 
-3. Meeting Notes Summarizer: paste notes, choose Brief or Detailed. Output Summary, Key Decisions, Action Items (task, owner, deadline) and Deadlines. Use "Not specified" for anything missing; never invent items. Editable, with Copy and a "Draft follow-up email" button that opens the Email page prefilled.
+This project was built for the CAPACITI AI Skills Accelerator Programme to demonstrate practical AI use, prompt engineering and responsible AI practices.
 
-Design: clean, modern, professional. Warm ivory and deep green with one vermilion accent (#E8553D), serif headings, no purple gradients.
+## ✨ Features Implemented
 
-Responsible AI: first-use disclaimer dialog and a sidebar card: "AI can make mistakes. Review before use. Don't enter sensitive data. Nothing is saved." Label every output "AI-generated · editable".
+### 1. Smart Email Generator
+- Generates professional, context-based emails from the recipient and key points
+- Three tones: **Formal**, **Friendly** and **Persuasive**
+- Adapts to the audience (client, manager or team) and length (Short or Medium)
+- Editable subject and body, with **Copy**, **Regenerate** and **switch tone** options
 
-This project was built with [Lovable](https://lovable.dev).
+### 2. AI Research Assistant
+- Summarises a topic, pasted article or URL
+- Produces a **Summary**, **Key Insights** and **Recommendations / Next Steps**
+- All sections are editable, with a **Copy as notes** button
+- If a URL cannot be read, the app says so and asks the user to paste the text instead of inventing content
 
-**Live app**: https://mcflow-assistant.lovable.app
+### 3. Meeting Notes Summarizer
+- Accepts pasted meeting notes or a transcript
+- Brief or Detailed summary options
+- Extracts **Key Decisions**, **Action Items** (task, owner, deadline) and **Deadlines**
+- Shows "Not specified" for anything missing, so nothing is made up
+- Editable output, with a **Draft follow-up email** button that opens the Email tool prefilled
 
-## Build with Lovable
+### Also Included
+- Dashboard layout with sidebar navigation (bottom tab bar on mobile)
+- Responsive design for desktop and mobile
+- Light/dark theme toggle
+- Loading, error and empty states on every feature
+- Responsible AI disclaimer
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/6c233f56-bdec-4b29-b198-859e82b1eadc).
+## 🛡️ Responsible AI
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- A first-use disclaimer dialog and a persistent sidebar card
+- Every output is labelled **"AI-generated · editable"**
+- AI can make mistakes, so review all outputs before sending or acting on them
+- Do not enter sensitive or confidential information
+- Nothing is saved: data stays in the browser tab and is cleared on refresh
+- The app is instructed never to invent URL content, action items, owners or deadlines
 
-## Development
+## 🛠️ Technologies and Tools Used
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+| Purpose | Tool |
+|---|---|
+| App building | [Lovable](https://lovable.dev) |
+| Prompt structuring | Claude (Anthropic) |
+| Version control and code storage | GitHub |
+| Frontend | React, TypeScript, Tailwind CSS (generated by Lovable) |
+| AI responses | Lovable AI |
+| Deployment | Lovable Publish |
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## 🚀 Setup Instructions
+
+**To use the app:** open the live link above. No setup, account or login is needed.
+
+**To run it locally:**
+
+1. Make sure [Node.js](https://nodejs.org) is installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/boetarel/mcflow-assistant.git
+   cd mcflow-assistant
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open the local address shown in the terminal (usually `http://localhost:5173`).
+
+> Note: the AI features rely on Lovable AI, so they work fully in the published app. Running locally may require extra configuration.
+
+## 🧠 Prompt Strategy
+
+- Prompts were drafted and refined in Claude, then kept short to save Lovable credits
+- Each feature prompt specifies inputs, outputs and guardrails (for example, "never invent action items")
+- Outputs were tested across tones and input types, then improved with batched fixes
+
+## 👤 Team Members
+
+**Relton McMaster** (sole developer)
+
+---
+
+*McFlow Assistant: built in Gqeberha to keep your workday sharp. 🌊*
