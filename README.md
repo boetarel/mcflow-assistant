@@ -11,8 +11,6 @@
 🔗 **Live app:** https://mcflow-assistant.lovable.app
 📦 **Repository:** https://github.com/boetarel/mcflow-assistant
 
-![McFlow Assistant dashboard](docs/screenshots/dashboard.png)
-
 ---
 
 ## Table of Contents
