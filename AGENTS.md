@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- AI calls live in `src/lib/ai.functions.ts` (server functions) using `runStructured` in `src/lib/ai.server.ts` (Responses API, strict zod schema) — keeps prompts and the key server-side.
+- Server functions return `AiResult` (`{ok, data} | {ok:false, error}`) with user-friendly messages instead of throwing — UI shows the error state directly.
+- Page state lives in the in-memory `WorkspaceProvider` (`useTabState`/`useAiTask`) — survives page switches, never persisted; cross-page prefill writes store keys before navigating.
+- Output normalisation ("Not specified", bullets, URL detection) lives in `src/lib/format.ts` with tests in `src/test/format.test.ts`.
