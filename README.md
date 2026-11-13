@@ -39,6 +39,7 @@ McFlow Assistant puts three AI tools in a single, responsive dashboard. You ente
 
 ## Try It in 60 Seconds
 
+
 1. Open the [live app](https://mcflow-assistant.lovable.app).
 2. **Email:** write an email to a client, then generate it in **Formal**, then switch to **Persuasive** and compare.
 3. **Research:** enter a topic such as *"load shedding and small businesses in Gqeberha"*, then try pasting a URL.
@@ -71,6 +72,7 @@ McFlow Assistant puts three AI tools in a single, responsive dashboard. You ente
 - Editable AI output everywhere
 
 ## Responsible AI
+
 
 - **Disclaimer on first use** and a persistent sidebar card
 - Every output is labelled **"AI-generated · editable"**, so the user stays in control
