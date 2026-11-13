@@ -11,6 +11,8 @@
 🔗 **Live app:** https://mcflow-assistant.lovable.app
 📦 **Repository:** https://github.com/boetarel/mcflow-assistant
 
+![McFlow Assistant dashboard](docs/screenshots/dashboard.png)
+
 ---
 
 ## Table of Contents
@@ -41,7 +43,7 @@ McFlow Assistant puts three AI tools in a single, responsive dashboard. You ente
 
 
 1. Open the [live app](https://mcflow-assistant.lovable.app).
-2. **Email:** write an email to a client, then generate it in **Formal**, then switch to **Persuasive** and compare.
+​2. **Email:** write an email to a client, then generate it in **Formal**, then switch to **Persuasive** and compare.
 3. **Research:** enter a topic such as *"load shedding and small businesses in Gqeberha"*, then try pasting a URL.
 4. **Meetings:** paste some notes that include a name and a deadline, then click **Draft follow-up email**.
 
@@ -96,14 +98,74 @@ Key techniques:
 <details>
 <summary>Example build prompt (condensed)</summary>
 
-```text
-Build a modern, responsive SaaS web app called "McFlow Assistant" for professionals.
-No login, no registration, no database. Keep the code compact.
-Layout: dashboard with collapsible sidebar (Email, Research, Meetings),
-input and output sections, theme toggle, bottom tab bar on mobile.
-All outputs must be real AI-generated responses based on the user's actual input.
-Show loading, error and empty states.
-1. Smart Email Generator: recipient, audience, key points, length; tone (Formal / Friendly / Persuasive).
-2. AI Research Assistant: topic, article or URL; Summary, Key Insights, Recommendations.
-3. Meeting Notes Summarizer: notes in; Summary, Decisions, Action Items, Deadlines out.
-Responsible AI: first-use disclaimer and sidebar card; label every output "AI-generated · editable".
+    Build a modern, responsive SaaS web app called "McFlow Assistant" for professionals.
+    No login, no registration, no database. Keep the code compact.
+    Layout: dashboard with collapsible sidebar (Email, Research, Meetings),
+    input and output sections, theme toggle, bottom tab bar on mobile.
+    All outputs must be real AI-generated responses based on the user's actual input.
+    Show loading, error and empty states.
+    1. Smart Email Generator: recipient, audience, key points, length; tone (Formal / Friendly / Persuasive).
+    2. AI Research Assistant: topic, article or URL; Summary, Key Insights, Recommendations.
+    3. Meeting Notes Summarizer: notes in; Summary, Decisions, Action Items, Deadlines out.
+    Responsible AI: first-use disclaimer and sidebar card; label every output "AI-generated · editable".
+
+</details>
+
+## Tech Stack
+
+| Purpose | Tool |
+|---|---|
+| App building | [Lovable](https://lovable.dev) |
+| Prompt design and README drafting | Claude (Anthropic) |
+| AI responses in the app | Lovable AI |
+| Frontend (generated) | React, TypeScript, Tailwind CSS |
+| Version control | GitHub |
+| Deployment | Lovable Publish |
+
+## Run It Locally
+
+You don't need to install anything to use the app: just open the [live link](https://mcflow-assistant.lovable.app).
+
+To run the code on your machine you need [Node.js](https://nodejs.org) installed.
+
+    git clone https://github.com/boetarel/mcflow-assistant.git
+    cd mcflow-assistant
+    npm install
+    npm run dev
+
+Then open the address shown in the terminal (usually `http://localhost:5173`).
+
+> **Note:** the AI features use Lovable AI, which is set up for the published app. Locally the interface runs, but AI generation may need extra configuration.
+
+## Known Limitations
+
+
+- AI output can be wrong or biased, so always review it before use
+- Some URLs (login-protected or script-heavy pages) can't be read, so you may need to paste the text
+- Meeting summaries are only as good as the notes you paste in
+- Nothing is saved, so copy your results before leaving or refreshing the page
+
+## Next Steps
+
+
+- Add the **AI Task Planner** (prioritised daily and weekly schedules)
+- Add an **AI Chatbot** that can reference your latest email, research and meeting summary
+- Export meeting summaries to PDF and Word
+- Add optional saved history for users who want it
+
+## How This Maps to the Project Brief
+
+| Brief criterion | Where it is addressed |
+|---|---|
+| Problem relevance | [The Problem](#the-problem): everyday workplace admin |
+| Prompt engineering | [Prompt Engineering](#prompt-engineering): structured prompts with guardrails and batched refinement |
+| Functionality | Three working AI tools, linked by the follow-up email workflow |
+| Innovation | Meeting-to-email workflow, "Not specified" honesty rule, tone switching on the same draft |
+| Responsible AI | [Responsible AI](#responsible-ai) and [Known Limitations](#known-limitations) |
+| Presentation | Clean responsive UI, live demo, this README |
+
+## Author
+
+**Relton McMaster**, sole developer
+Gqeberha 🌊
+Built for the CAPACITI AI Skills Accelerator Programme 
