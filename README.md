@@ -73,12 +73,6 @@ McFlow Assistant puts three AI tools in a single, responsive dashboard. You ente
 - Loading, error and empty states on every tool
 - Editable AI output everywhere
 
-## Screenshots
-
-| Email Generator | Research Assistant | Meeting Summarizer |
-|---|---|---|
-| ![Email](docs/screenshots/email.png) | ![Research](docs/screenshots/research.png) | ![Meetings](docs/screenshots/meetings.png) |
-
 ## Responsible AI
 
 - **Disclaimer on first use** and a persistent sidebar card
